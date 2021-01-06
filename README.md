@@ -74,7 +74,7 @@ For algorithm evaluation, Mean Square Error (MSE) metric was used for comparison
   Fig 2. Average MSE comparison using K-fold cross-validation
 </p> 
 
-The Decision Tree approach appears to be over-fitting the training data (MSE = 0) and showed very high (MSE = 9.67) for the validation data (please refer to the attached CancerNSW_Analysis.html). The fitting for Linear Regression was erroneous and showed lower MSE (= 3.93) for the validation set compared to training data (7.25). Reviewing the data splitting method, adding more features may improve the model performance. 
+The Decision Tree approach appears to be over-fitting the training data (MSE = 0) and showed very high (MSE = 9.67) for the validation data (please refer to the attached Regression_Analysis.ipynb). The fitting for Linear Regression was erroneous and showed lower MSE (= 3.93) for the validation set compared to training data (7.25). Reviewing the data splitting method, adding more features may improve the model performance. 
 
 Considering the performance of the three models, Random Forest regression algorithm provides the reasonably well performance (mean MSE = 2.81 using cross-validation), thus, was selected to build the final model as part of this exercise.
 
