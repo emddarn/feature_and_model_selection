@@ -39,7 +39,7 @@ However, Pearson correlation coefficient is not a good indicator of non-linear r
 **Feature permutation:** Permutation importance is calculated after a model has been fit. It works based on the principle that randomly re-ordering a single feature should provide less accurate predictions, if the model heavily relies on that feature for prediction. The top three features using this approach are “wt”, “disp”, and “hp”.
 
 <p align="center">
-  <img src="report_diagrams/Fig_1_relationship.jpg?raw=true" alt="fig_1"/>  
+  <img src="report_diagrams/Fig_1_relationship.jpg?raw=true" alt="fig_1"/>  <br/>
   Fig 1: Relationship among mpg and the selected features
 </p> 
 
@@ -53,7 +53,7 @@ The goal of this activity is to build a model to predict the parameter “mpg”
 For algorithm evaluation, Mean Square Error (MSE) metric was used for comparison. As the training sample size was small, the K-fold cross-validation (k=5) approach was applied. In addition, the training data was split manually to compare the training and validation MSE for further insight.
 
 <p align="center">
-  <img src="report_diagrams/Fig_2_mse_comparison.jpg?raw=true" alt="fig_2"/>  
+  <img src="report_diagrams/Fig_2_mse_comparison.jpg?raw=true" alt="fig_2"/>  <br/>
   Fig 2. Average MSE comparison using K-fold cross-validation
 </p> 
 
@@ -64,6 +64,7 @@ Considering the performance of the three models, Random Forest regression algori
 ###	Algorithm Fine Tuning and Final Model
 The next step was to fine-tune the selected Random Forest Regression algorithm for this dataset. For this exercise, parameters related to number of trees in the forest, maximum leaf nodes (to regularise the model), whether to use bagging or not were evaluated through K-fold cross-validation of the training dataset. The most accurate combination of parameters for this case found to be, 3 for number of trees and 4 for maximum leaf nodes, with no bootstrap aggregation; which were selected for the final model.
 
+<p align="center">
 <table>
 <thead>
   <tr>
@@ -89,12 +90,13 @@ The next step was to fine-tune the selected Random Forest Regression algorithm f
 </tbody>
 </table>  
 Table 1. MSE measure of the final model in predicting “mpg”  
+</p>
 
 <br/><br/>
 Since the amount of test data is not large enough, the final model applied 3-fold cross validation which showed an average MSE of 2.74 (standard deviation of 0.79). This means that while predicting the value of mpg, on an average the predicted “mpg” could be as close as 1.95 (=2.74-0.79) or as far as 3.58 (=2.79+0.79) from the actual value.
 
 <p align="center">
-  <img src="report_diagrams/Fig_3_feature_importance.jpg?raw=true" alt="fig_3"/>  
+  <img src="report_diagrams/Fig_3_feature_importance.jpg?raw=true" alt="fig_3"/>  <br/>
   Fig 3. Importance of feature in predicting mpg
 </p>  
 
