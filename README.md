@@ -92,6 +92,7 @@ The next step was to fine-tune the selected Random Forest Regression algorithm f
 Table 1. MSE measure of the final model in predicting “mpg”  
 </center>
 
+
 <br/><br/>
 Since the amount of test data is not large enough, the final model applied 3-fold cross validation which showed an average MSE of 2.74 (standard deviation of 0.79). This means that while predicting the value of mpg, on an average the predicted “mpg” could be as close as 1.95 (=2.74-0.79) or as far as 3.58 (=2.79+0.79) from the actual value.
 
