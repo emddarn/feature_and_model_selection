@@ -1,4 +1,21 @@
+
 # Predictive Analysis of MtCars Dataset
+
+## Table of Contents
+- [Executive Summary](#executive-summary)
+- [Dataset](#dataset)
+  * [Source Data](#source-data)
+  * [Train-test Dataset](#train-test-dataset)
+- [Feature Selection](#feature-selection)
+  * [Training Data Insight](#training-data-insight)
+  * [Feature Engineering](#feature-engineering)
+  * [Feature Selection Techniques](#feature-selection-techniques)
+- [Predictive Modelling](#predictive-modelling)
+  * [Algorithm Selection and Evaluation](#algorithm-selection-and-evaluation)
+  * [Algorithm Fine Tuning and Final Model](#algorithm-fine-tuning-and-final-model)
+- [Recommendation](#recommendation)
+- [Appendix](#appendix)
+
 
 ## Executive Summary
 The goal of this activity is to build a machine learning model to predict the mile/gallon (mpg) variable using three or less predictor features using MtCars dataset. The MtCars dataset has 12 different columns describing the fuel consumption (mpg), car model, and 10 other design and performance metrics for 32 automobiles. To build a predictive model, at first the available data was split into training and test set. The training dataset was analysed for data insight and pattern identification, where new features were included from the insights. For feature selection, three different approaches were adopted to identify three most important features for mpg prediction: “wt”, “disp”, and “cyl”. Both linear and non-linear learning algorithm were compared to identify the Random Forest Regressor as base algorithm, which was then fine-tuned using grid-search technique. Finally the fine-tuned model is employed to calculate the benchmark performance of the developed model for any unseen data.
