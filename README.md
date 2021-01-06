@@ -64,7 +64,7 @@ Considering the performance of the three models, Random Forest regression algori
 ###	Algorithm Fine Tuning and Final Model
 The next step was to fine-tune the selected Random Forest Regression algorithm for this dataset. For this exercise, parameters related to number of trees in the forest, maximum leaf nodes (to regularise the model), whether to use bagging or not were evaluated through K-fold cross-validation of the training dataset. The most accurate combination of parameters for this case found to be, 3 for number of trees and 4 for maximum leaf nodes, with no bootstrap aggregation; which were selected for the final model.
 
-<p align="center">
+<center>
 <table>
 <thead>
   <tr>
@@ -90,7 +90,7 @@ The next step was to fine-tune the selected Random Forest Regression algorithm f
 </tbody>
 </table>  
 Table 1. MSE measure of the final model in predicting “mpg”  
-</p>
+</center>
 
 <br/><br/>
 Since the amount of test data is not large enough, the final model applied 3-fold cross validation which showed an average MSE of 2.74 (standard deviation of 0.79). This means that while predicting the value of mpg, on an average the predicted “mpg” could be as close as 1.95 (=2.74-0.79) or as far as 3.58 (=2.79+0.79) from the actual value.
