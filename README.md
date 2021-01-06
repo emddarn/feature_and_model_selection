@@ -38,7 +38,7 @@ However, Pearson correlation coefficient is not a good indicator of non-linear r
 
 **Feature permutation:** Permutation importance is calculated after a model has been fit. It works based on the principle that randomly re-ordering a single feature should provide less accurate predictions, if the model heavily relies on that feature for prediction. The top three features using this approach are “wt”, “disp”, and “hp”.
 
-![fig_1](report_diagrams/Fig_1_relationship.jpg?raw=true "Fig 1: Relationship among mpg and the selected features")
+![fig_1](report_diagrams/Fig_1_relationship.jpg?raw=true "Fig 1: Relationship among mpg and the selected features")  
 Fig 1: Relationship among mpg and the selected features
 
 Two approaches (correlation-based, and k-best) indicated “wt”, “disp”, and “cyl” to be the top features in predicting “mpg”; thus, for these features were selected for modelling as part of this activity and reporting. Fig 1 illustrates the strong correlation of these features with the “mpg” variable. 
@@ -50,10 +50,7 @@ The goal of this activity is to build a model to predict the parameter “mpg”
 
 For algorithm evaluation, Mean Square Error (MSE) metric was used for comparison. As the training sample size was small, the K-fold cross-validation (k=5) approach was applied. In addition, the training data was split manually to compare the training and validation MSE for further insight.
 
-
-
-![fig_2](report_diagrams/Fig_2_mse_comparison.jpg?raw=true "Fig 2. Average MSE comparison using K-fold cross-validation")
-
+![fig_2](report_diagrams/Fig_2_mse_comparison.jpg?raw=true "Fig 2. Average MSE comparison using K-fold cross-validation")  
 Fig 2. Average MSE comparison using K-fold cross-validation
 
 The Decision Tree approach appears to be over-fitting the training data (MSE = 0) and showed very high (MSE = 9.67) for the validation data (please refer to the attached CancerNSW_Analysis.html). The fitting for Linear Regression was erroneous and showed lower MSE (= 3.93) for the validation set compared to training data (7.25). Reviewing the data splitting method, adding more features may improve the model performance. 
@@ -62,8 +59,6 @@ Considering the performance of the three models, Random Forest regression algori
 
 ###	Algorithm Fine Tuning and Final Model
 The next step was to fine-tune the selected Random Forest Regression algorithm for this dataset. For this exercise, parameters related to number of trees in the forest, maximum leaf nodes (to regularise the model), whether to use bagging or not were evaluated through K-fold cross-validation of the training dataset. The most accurate combination of parameters for this case found to be, 3 for number of trees and 4 for maximum leaf nodes, with no bootstrap aggregation; which were selected for the final model.
-
-Since the amount of test data is not large enough, the final model applied 3-fold cross validation which showed an average MSE of 2.74 (standard deviation of 0.79). This means that while predicting the value of mpg, on an average the predicted “mpg” could be as close as 1.95 (=2.74-0.79) or as far as 3.58 (=2.79+0.79) from the actual value.
 
 <table>
 <thead>
@@ -88,12 +83,12 @@ Since the amount of test data is not large enough, the final model applied 3-fol
     <td>-</td>
   </tr>
 </tbody>
-</table>
-Table 1. MSE measure of the final model in predicting “mpg”
+</table>  
+Table 1. MSE measure of the final model in predicting “mpg”  
 
+Since the amount of test data is not large enough, the final model applied 3-fold cross validation which showed an average MSE of 2.74 (standard deviation of 0.79). This means that while predicting the value of mpg, on an average the predicted “mpg” could be as close as 1.95 (=2.74-0.79) or as far as 3.58 (=2.79+0.79) from the actual value.
 
-
-![fig_3](report_diagrams/Fig_3_feature_importance.jpg?raw=true "Fig 3. Importance of feature in predicting mpg")
+![fig_3](report_diagrams/Fig_3_feature_importance.jpg?raw=true "Fig 3. Importance of feature in predicting mpg")  
 Fig 3. Importance of feature in predicting mpg
 
 From feature importance analysis of the model in Fig. 3, it is found that weight of the car is the number one predictor for miles-per-gallon (mpg) estimation.
@@ -105,10 +100,10 @@ For the sake of simplicity in this exercise, random sampling was used to separat
 Additionally, other learning algorithms like support vector machines based regressor can also be tested; however, for that case feature scaling is a must.
 
 ## Appendix
-Fig 4: Histogram Plot for each feature (for detail please refer to the Regression_Analysis.ipynb)
+Fig 4: Histogram Plot for each feature (for detail please refer to the Regression_Analysis.ipynb)  
 ![fig_4](report_diagrams/Fig_4_histogram.jpg?raw=true)
 
-Fig 5: Bivariate relation analysis using scatter plot (refer to the Regression_Analysis.ipynb)
+Fig 5: Bivariate relation analysis using scatter plot (refer to the Regression_Analysis.ipynb)  
 ![fig_5](report_diagrams/Fig_5_bivariate_analysis.jpg?raw=true)
 
 
