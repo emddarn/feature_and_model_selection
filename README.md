@@ -1,5 +1,5 @@
 
-# Predictive Analysis of MtCars Dataset
+# Predicting "mpg" Using 3 or Less Features
 
 ## Table of Contents
 - [Executive Summary](#executive-summary)
